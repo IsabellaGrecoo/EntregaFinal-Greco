@@ -1,3 +1,4 @@
+
 * {
     margin: 0rem;
     padding: 0rem;
@@ -609,12 +610,7 @@ article img {
         flex-direction: column;
     }
 
-    article img {
-        width: fit-content;
-    }
-
-
-
+    
 
     .div-hotels {
         width: fit-content;
@@ -829,14 +825,13 @@ iframe {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 .section-img {
     grid-area: img;
     margin-top: 14rem;
 
     display: grid;
     grid-template-columns: 40rem 40rem;
-    grid-template-rows: 20rem 20rem;
+    justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -849,6 +844,48 @@ iframe {
             "main"
             "footer";
     }
+
+    .main-article-food {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: " text"
+                             " img";
+    }
+    .section-text {
+        border-right: none;
+        }
+    
+        .section-img {
+            margin: 2rem;     
+    
+            display: grid;
+            grid-template-columns:auto  ;
+            grid-template-rows:1fr  ;
+            grid-template-areas: "img1"
+                                 "img2"
+                                 "img3"
+                                 "img4";
+        justify-content: center;
+        }
+       
+
+        .food-img1-appear{
+            grid-area: img1; 
+        }
+        .food-img1-appear{
+            grid-area: img2;
+        }
+        .food-img1-appear{
+            grid-area: img3;
+        }
+        .food-img1-appear{
+            grid-area: img4;
+        }
+
+
+        .food-img-disapear{
+            display: none;
+        }
 }
 
 /* fin FOOD */
