@@ -1,0 +1,64 @@
+@use'./variable.scss';
+#all-pa {
+    display: grid;
+    grid-template-columns: 78% 22%;
+}
+.section-pa {
+    border: 0rem solid;
+    padding: 2rem;
+    margin: 2rem;
+    background-color:variable.$darker_color;
+}
+.divs-pa {
+    margin: 4rem;
+}
+aside {
+    margin:0rem, 1rem, 5rem, 2rem;
+    border: solid 0.4rem variable.$darker_color;
+    padding: 1rem;
+    padding-bottom: 0rem;
+    height: 60rem;
+    position: relative;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.title-aside {
+    text-align: center;
+    font-size: medium;
+    line-height: 2rem;
+    height: 5rem;
+}
+iframe {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+        #all-pa {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+    aside {
+        margin-right: 2rem;
+        margin-left: 1rem;
+        margin-bottom: 5rem;
+        border: solid 0.4rem variable.$darker_color;
+        padding: 4rem;
+        height: 65rem;
+        position: relative;
+        top: 2rem;
+        display: flex;
+        flex-direction: column;
+   }
+    .title-aside {
+        text-align: center;
+        font-size: medium;
+    }
+}
+@media screen and (max-width: 352px) {
+    .title-aside {
+        font-size: xx-small;
+    }
+}

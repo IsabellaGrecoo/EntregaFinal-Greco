@@ -1,0 +1,218 @@
+@use'./variable.scss';
+
+@mixin tamanios($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+.hotels-articles {
+    display: flex;
+    flex-direction: row;
+}
+
+.hotel-middlearticle {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.div-hotels {
+    border: 3px double variable.$general_color;
+    padding: 1rem;
+    margin: 1rem;
+    width: 50rem;
+}
+
+.h2-hoteltitles {
+    margin: 1rem;
+    font-size: 2rem;
+    font-family: variable.$font_titulo;
+    display: block;
+    display: flex;
+    justify-content: center;
+}
+
+.link-hotels {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: block;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.hotel-imgs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin left-top($left, $top) {
+    left: $left;
+    top: $top;
+}
+
+.firstimgfirst {
+    position: relative;
+    left: 14rem;
+}
+
+.firstimgsecond {
+    position: relative;
+    @include left-top(0.5rem, 1.2rem);
+}
+
+.secondimgfirst {
+    position: relative;
+    @include left-top(2rem, 2.5rem);
+}
+
+.secondimgsecond {
+    position: relative;
+    left: 15rem;
+}
+
+.thirdtimgsecond {
+    position: relative;
+    @include left-top(14rem, 2rem);
+}
+
+.thirdimgfirst {
+    position: relative;
+    @include left-top(0.5rem, 1rem);
+}
+
+article img {
+    @include tamanios(35rem, 15rem);
+}
+
+.transport-list-img {
+    border: 3px double variable.$general_color;
+    padding: 1rem;
+    padding-bottom: 0rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.transport-list {
+    padding-left: 1rem;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: circle;
+    list-style-position: outside;
+}
+
+.transport-img {
+    @include tamanios(20rem, 20rem);
+    padding-left: 5rem;
+}
+
+.transport-text {
+    margin: 4rem;
+    font-size: 15px;
+    font-family: variable.$font_titulo;
+}
+
+#sections-st {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: "stays transport";
+}
+
+#stays {
+    grid-area: stays;
+    margin-right: 2rem;
+}
+
+#transport {
+    border-left: 3px solid variable.$general_color;
+    grid-area: transport;
+}
+
+@media screen and (max-width: 768px) {
+        h1 {
+        font-size: 3rem;
+    }
+
+    .felx-direction-colum {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sections-st {
+        @extend .felx-direction-colum
+    }
+
+    .hotels-articles {
+        @extend .felx-direction-colum
+    }
+
+    .hotel-middlearticle {
+        @extend .felx-direction-colum
+    }
+
+    .div-hotels {
+        width: fit-content;
+    }
+
+    .hotel-imgs {
+        width: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .st-imgs {
+        position: relative;
+        left: 7%;
+        width: 35rem;
+    }
+
+    .firstimgfirst {
+        @extend .st-imgs;
+        padding-bottom: 3rem;
+    }
+
+    .firstimgsecond {
+        display: none;
+    }
+
+    .secondimgfirst {
+        @extend .st-imgs;
+        margin-bottom: 5rem;
+    }
+
+    .secondimgsecond {
+        display: none;
+    }
+
+    .thirdtimgsecond {
+        @extend .st-imgs;
+        margin-bottom: 3rem;
+    }
+
+    .thirdimgfirst {
+        display: none;
+    }
+
+    #transport {
+        border-left: 0px;
+        border-top: 0.5rem solid variable.$general_color;
+        margin-top: 3rem;
+        grid-area: transport;
+    }
+
+    #section-st {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "stays"
+            "transpor";
+    }
+
+    #stays {
+        grid-area: stays;
+        margin-right: 0rem;
+    }
+}

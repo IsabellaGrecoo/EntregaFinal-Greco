@@ -1,0 +1,51 @@
+@use'./variable.scss';
+form {
+    padding: 2rem;
+    margin: 2rem;
+}
+
+fieldset {
+    border: double variable.$general_color 0.5rem;
+}
+.legend-formp{
+    color: variable.$general_color;
+    font-size: 1.7rem;
+    font-family: variable.$font_titulo;
+    font-weight: bolder;
+}
+.memories-form-divs{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+legend {
+   @extend .legend-formp;
+}
+
+.memories-form-div1 {
+    @extend .memories-form-divs
+}
+
+.memories-form-div1 div {
+    padding: 1rem;
+}
+
+form label {
+    font-size: 1.5rem;
+}
+
+form p {
+    @extend .legend-formp;
+    padding-bottom: 1rem;
+    padding-top: 4rem;
+}
+
+.memories-form-div2 {
+    @extend .memories-form-divs
+}
+
+.memories-form-div2--subdivs {
+    display: inline-block;
+    padding: 1rem;
+}

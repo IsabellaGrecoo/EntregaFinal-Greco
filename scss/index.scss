@@ -1,0 +1,106 @@
+@use'./variable.scss';
+@mixin tamanios($width,$height){
+    width:$width;
+    height:$height;
+}
+.index-foto-horizontal {
+    width: 100%;
+}
+.index-title-generalinformation {
+    border: 0.3rem variable.$darker_color dashed;
+    padding: 1rem;
+    margin-left: 2rem;
+    font-family: variable.$font_titulo;
+    font-size: 3rem;
+    color: variable.$darker_color;
+    border-radius: 3rem;
+    display: inline-block
+}
+.index-text-genralinformation {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border:0rem solid variable.$darker_color;
+}
+.div-gi-123{
+    margin: 10px;
+    padding: 5px;
+    border: solid variable.$darker_color 5px;
+    font-size: 17px;
+    font-family: variable.$font_titulo;
+    border-radius: 20px;
+   }
+.div-GI-1 {
+   @extend .div-gi-123
+}
+.div-GI-2 {
+    @extend .div-gi-123
+}
+.div-GI-3 {
+    @extend .div-gi-123
+}
+#index-img {
+    margin-bottom: 2rem;
+    height: 22rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 768px) {
+        
+    .index-title-generalinformation {
+        font-size: 2rem;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        margin-left: 9rem;
+        margin-right: 9rem;
+    }
+    .index-text-genralinformation {
+        display: flex;
+        flex-direction: column;
+    }
+    #index-img {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "img1 img2"
+            "img3 img4";
+    }
+    .img1 {
+        grid-area: img1;
+        @include tamanios(20rem,10rem);
+    }
+    .img2 {
+        grid-area: img2;
+        @include tamanios(20rem,10rem);
+    }
+    .img3 {
+        grid-area: img3;
+        @include tamanios(20rem,10rem);
+    }
+    .img4 {
+        grid-area: img4;
+        @include tamanios(20rem,10rem);
+    }
+    .ig-logo {
+        width: 13%;
+        padding: 1%;
+    }
+    .yt-logo {
+        width: 13%;
+        padding: 1%;
+    }
+    .mail-logo {
+        width: 14%;
+        padding: 1%;
+    }
+    #go-down {
+        display: none;
+    }
+    #footer-go-up {
+        display: none;
+    }
+}

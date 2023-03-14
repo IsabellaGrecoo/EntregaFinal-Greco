@@ -1,0 +1,39 @@
+.all-medias{
+    @media screen and (max-width: 768px) {
+        
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto 12rem;
+            grid-template-areas:
+                "header"
+                "main"
+                "footer";
+        
+
+        #go-down {
+            display: none;
+        }
+        #footer-go-up {
+            display: none;
+        }
+    }
+}
+
+#body-index{
+    @extend .all-medias
+}
+#body-st {
+    @extend .all-medias
+}
+#body-pa{
+    @extend .all-medias
+}
+#body-food{
+    @extend .all-medias
+}
+#body-tips{
+    @extend .all-medias
+}
+#body-memories{
+    @extend .all-medias
+}

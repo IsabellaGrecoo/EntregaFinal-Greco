@@ -1,0 +1,26 @@
+.bodies{
+    display: grid;
+    grid-template-rows: 19rem auto auto;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+}
+#body-index {
+    @extend .bodies
+}
+#body-st {
+    @extend .bodies
+}
+#body-pa {
+    @extend .bodies
+}
+#body-food {
+    @extend .bodies
+}
+#body-tips {
+    @extend .bodies
+}
+#body-memories {
+    @extend .bodies
+}
