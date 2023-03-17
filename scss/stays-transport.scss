@@ -53,32 +53,34 @@
 
 .firstimgfirst {
     position: relative;
-    left: 14rem;
+    left: 8rem;
+    top: 7rem;
+    
 }
 
 .firstimgsecond {
     position: relative;
-    @include left-top(0.5rem, 1.2rem);
+    @include left-top(8rem, 1.2rem);
 }
 
 .secondimgfirst {
     position: relative;
-    @include left-top(2rem, 2.5rem);
+    @include left-top(8rem, 7rem);
 }
 
 .secondimgsecond {
     position: relative;
-    left: 15rem;
+    left: 8rem;
 }
 
 .thirdtimgsecond {
     position: relative;
-    @include left-top(14rem, 2rem);
+    @include left-top(8rem, 2rem);
 }
 
 .thirdimgfirst {
     position: relative;
-    @include left-top(0.5rem, 1rem);
+    @include left-top(8rem, 7rem);
 }
 
 article img {
@@ -127,6 +129,7 @@ article img {
 
 #transport {
     border-left: 3px solid variable.$general_color;
+    margin-bottom: 3rem;
     grid-area: transport;
 }
 
@@ -154,7 +157,7 @@ article img {
 
     .div-hotels {
         width: fit-content;
-    }
+        }
 
     .hotel-imgs {
         width: 100vh;

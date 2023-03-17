@@ -139,36 +139,37 @@
 
 .firstimgfirst {
   position: relative;
-  left: 14rem;
+  left: 8rem;
+  top: 7rem;
 }
 
 .firstimgsecond {
   position: relative;
-  left: 0.5rem;
+  left: 8rem;
   top: 1.2rem;
 }
 
 .secondimgfirst {
   position: relative;
-  left: 2rem;
-  top: 2.5rem;
+  left: 8rem;
+  top: 7rem;
 }
 
 .secondimgsecond {
   position: relative;
-  left: 15rem;
+  left: 8rem;
 }
 
 .thirdtimgsecond {
   position: relative;
-  left: 14rem;
+  left: 8rem;
   top: 2rem;
 }
 
 .thirdimgfirst {
   position: relative;
-  left: 0.5rem;
-  top: 1rem;
+  left: 8rem;
+  top: 7rem;
 }
 
 article img {
@@ -219,6 +220,7 @@ article img {
 
 #transport {
   border-left: 3px solid rgb(12, 126, 126);
+  margin-bottom: 3rem;
   grid-area: transport;
 }
 
@@ -466,6 +468,8 @@ iframe {
 
 form {
   padding: 2rem;
+  padding-left: 50rem;
+  padding-right: 50rem;
   margin: 2rem;
 }
 
@@ -504,6 +508,18 @@ form p {
   padding: 1rem;
 }
 
+@media screen and (max-width: 1300px) {
+  form {
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+}
+@media screen and (max-width: 840px) {
+  form {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
 header {
   width: 100%;
   border: solid 3px rgba(17, 80, 80, 0.426);

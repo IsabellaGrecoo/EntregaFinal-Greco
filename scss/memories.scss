@@ -1,6 +1,8 @@
 @use'./variable.scss';
 form {
     padding: 2rem;
+    padding-left:50rem ;
+    padding-right: 50rem;
     margin: 2rem;
 }
 
@@ -48,4 +50,18 @@ form p {
 .memories-form-div2--subdivs {
     display: inline-block;
     padding: 1rem;
+}
+@media screen and (max-width: 1300px) {
+    
+    form{
+    padding-left:20rem ;
+    padding-right: 20rem;
+    }
+}
+@media screen and (max-width: 840px) {
+    
+    form{
+    padding-left:5rem ;
+    padding-right: 5rem;
+    }
 }
